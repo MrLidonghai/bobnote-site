@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BobNote is a local-first visual notes app. Your notes never leave your disk. We run no servers. We collect nothing.">
+  <meta name="theme-color" content="#ffffff">
+  <title>BobNote — See the connections</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="BobNote home">
+        <img class="brand-mark" src="assets/bobnote-mark.png" alt="" width="40" height="40">
+        <span class="brand-word">BobNote</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Local-first visual notes</p>
+          <h1 id="hero-title">
+            See the connections.<br>
+            <span class="muted-line">Take your data anywhere.</span><br>
+            <span class="muted-line">Built for bad days.</span>
+          </h1>
+          <p class="lede">
+            BobNote spreads your notes, files, and pictures across one infinite canvas,
+            and keeps every one of them in a plain folder on your own disk.
+          </p>
+          <p class="store-note"><span class="store-dot" aria-hidden="true"></span>Coming to the Mac App Store</p>
+        </div>
+
+        <div class="hero-visual" aria-hidden="false">
+          <svg class="board" viewBox="0 0 620 540" role="img" aria-labelledby="board-title board-desc">
+            <title id="board-title">A BobNote canvas</title>
+            <desc id="board-desc">Note, to-do, image, board, and mindmap cards arranged on a canvas and joined by curved connectors. One board card contains another board inside it.</desc>
+            <defs>
+              <filter id="cardShadow" x="-30%" y="-30%" width="160%" height="180%">
+                <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.08"/>
+              </filter>
+              <linearGradient id="pic" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" class="pic-top"/>
+                <stop offset="100%" class="pic-bottom"/>
+              </linearGradient>
+            </defs>
+
+            <!-- connectors sit under the cards -->
+            <g class="wires" fill="none" stroke-linecap="round">
+              <path d="M190 92 C240 92 240 220 290 220"/>
+              <path d="M190 252 C240 252 245 240 290 240"/>
+              <path d="M190 430 C240 430 245 300 290 300"/>
+              <path d="M440 210 C456 210 456 120 470 120"/>
+              <path d="M440 290 C452 290 448 420 456 420"/>
+            </g>
+
+            <!-- Note card -->
+            <g class="card" filter="url(#cardShadow)">
+              <rect x="20" y="40" width="170" height="104" rx="14"/>
+              <text class="card-label" x="40" y="70">Note</text>
+              <path class="rule" d="M40 90h128"/>
+              <path class="rule" d="M40 106h128"/>
+              <path class="rule" d="M40 122h78"/>
+            </g>
+
+            <!-- To-do card -->
+            <g class="card" filter="url(#cardShadow)">
+              <rect x="20" y="186" width="170" height="132" rx="14"/>
+              <text class="card-label" x="40" y="216">To-do</text>
+              <g class="todo">
+                <rect class="box done" x="40" y="234" width="13" height="13" rx="3.5"/>
+                <path class="tick" d="M43 240.5l2.6 2.8 4.8-5.4"/>
+                <path class="rule strike" d="M63 241h88"/>
+                <rect class="box done" x="40" y="262" width="13" height="13" rx="3.5"/>
+                <path class="tick" d="M43 268.5l2.6 2.8 4.8-5.4"/>
+                <path class="rule strike" d="M63 269h64"/>
+                <rect class="box" x="40" y="290" width="13" height="13" rx="3.5"/>
+                <path class="rule" d="M63 297h100"/>
+              </g>
+            </g>
+
+            <!-- Image card -->
+            <g class="card" filter="url(#cardShadow)">
+              <rect x="20" y="360" width="170" height="140" rx="14"/>
+              <clipPath id="picClip"><rect x="34" y="374" width="142" height="82" rx="8"/></clipPath>
+              <g clip-path="url(#picClip)">
+                <rect x="34" y="374" width="142" height="82" fill="url(#pic)"/>
+                <circle class="pic-sun" cx="146" cy="398" r="11"/>
+                <path class="pic-hill" d="M34 456l42-38 29 24 26-22 45 36z"/>
+              </g>
+              <text class="card-label" x="40" y="484">Image</text>
+            </g>
+
+            <!-- Board card with a nested board -->
+            <g class="card board-card" filter="url(#cardShadow)">
+              <rect x="290" y="170" width="150" height="170" rx="16"/>
+              <text class="card-label accent" x="310" y="202">Board</text>
+              <rect class="nested" x="310" y="216" width="110" height="100" rx="10"/>
+              <text class="card-label nested-label" x="326" y="246">Board</text>
+              <path class="rule nested-rule" d="M326 262h72"/>
+              <path class="rule nested-rule" d="M326 278h46"/>
+            </g>
+
+            <!-- Link card -->
+            <g class="card" filter="url(#cardShadow)">
+              <rect x="470" y="52" width="140" height="104" rx="14"/>
+              <text class="card-label" x="490" y="82">Link</text>
+              <circle class="dot" cx="496" cy="104" r="5"/>
+              <path class="rule" d="M510 104h74"/>
+              <path class="rule" d="M490 126h58"/>
+            </g>
+
+            <!-- Mindmap card -->
+            <g class="card" filter="url(#cardShadow)">
+              <rect x="456" y="372" width="154" height="132" rx="14"/>
+              <text class="card-label" x="476" y="402">Mindmap</text>
+              <g class="mind">
+                <path d="M504 446l44-16M504 452l46 20"/>
+                <circle class="dot big" cx="496" cy="449" r="9"/>
+                <circle class="dot" cx="556" cy="428" r="6"/>
+                <circle class="dot" cx="556" cy="474" r="6"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promise band -->
+    <section class="promise-band" aria-labelledby="promise-title">
+      <div class="shell">
+        <h2 id="promise-title" class="promise-line">
+          Your notes never leave your disk.<br>
+          We run no servers. <span class="accent-text">We collect nothing.</span>
+        </h2>
+        <ul class="promise-points reveal">
+          <li><span>No sign-in</span>There is no account to create, and nothing to log in to.</li>
+          <li><span>Works offline</span>A plane, a basement, a bad connection — it makes no difference.</li>
+          <li><span>Nothing collected</span>No analytics, no trackers, no telemetry. Not a byte.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- What BobNote is -->
+    <section class="section" aria-labelledby="values-title">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">What BobNote is</p>
+          <h2 id="values-title">See the relationships without giving up ownership.</h2>
+        </div>
+        <div class="value-grid">
+          <article class="value-block reveal">
+            <p class="value-number" aria-hidden="true">01</p>
+            <h3>One infinite canvas</h3>
+            <p>Lay everything out and look at it at once: matrix, mind map, and board views of the same
+              material. Draw connections between cards, and let a linked copy stay in sync across boards.
+              Boards nest inside boards — double-click one to step inside.</p>
+          </article>
+          <article class="value-block reveal">
+            <p class="value-number" aria-hidden="true">02</p>
+            <h3>Files are the asset</h3>
+            <p>Everything lives in a BobFolder: a plain folder on your own disk. No sign-in, no account,
+              fully offline. Apps come and go; your BobFolder is the record — and it is yours to read,
+              copy, and keep with or without us.</p>
+          </article>
+          <article class="value-block reveal">
+            <p class="value-number" aria-hidden="true">03</p>
+            <h3>Built for bad days</h3>
+            <p>A power cut mid-save, a drive unplugged at the wrong moment, an accidental delete. BobNote
+              is engineered so your work stays recoverable, deleted cards wait in a recycle area before
+              they are gone, and a damaged copy is refused rather than quietly accepted.</p>
+          </article>
+          <article class="value-block reveal">
+            <p class="value-number" aria-hidden="true">04</p>
+            <h3>Ready for your AI tools</h3>
+            <p>Because a BobFolder is plain files on disk, AI tools can read your library directly. They
+              work in a disposable sandbox copy, never in the live one, and you review and decide what
+              comes back in. Mermaid diagrams import as editable cards.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section steps-section" aria-labelledby="steps-title">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How it works</p>
+          <h2 id="steps-title">Apps come and go. Your BobFolder is the record.</h2>
+        </div>
+        <ol class="steps">
+          <li class="reveal">
+            <p class="step-index" aria-hidden="true">1</p>
+            <h3>Work on the canvas</h3>
+            <p>Drop in notes, files, pictures, and links. Arrange them until the shape of the thing
+              is obvious at a glance.</p>
+          </li>
+          <li class="reveal">
+            <p class="step-index" aria-hidden="true">2</p>
+            <h3>It saves to your folder</h3>
+            <p>Every card lands in a BobFolder you chose, on your own disk. Nothing is uploaded, because
+              there is nowhere to upload it to.</p>
+          </li>
+          <li class="reveal">
+            <p class="step-index" aria-hidden="true">3</p>
+            <h3>Take the folder anywhere</h3>
+            <p>Backing up is copying the folder. Moving machines is copying the folder. That is the whole
+              procedure, and it works without us.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Card types -->
+    <section class="section chips-section" aria-labelledby="cards-title">
+      <div class="shell">
+        <div class="section-heading compact reveal">
+          <p class="eyebrow">On the canvas</p>
+          <h2 id="cards-title">Fourteen kinds of card</h2>
+        </div>
+        <ul class="chip-list reveal" aria-label="Card types">
+          <li>Note</li>
+          <li>To-do</li>
+          <li>Image</li>
+          <li>Link</li>
+          <li>Board</li>
+          <li>Shape</li>
+          <li>File</li>
+          <li>Audio</li>
+          <li>Video</li>
+          <li>Column</li>
+          <li>Table</li>
+          <li>Draw</li>
+          <li>Annotate</li>
+          <li>Mindmap</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section pricing-section" aria-labelledby="pricing-title">
+      <div class="shell">
+        <div class="section-heading compact reveal">
+          <p class="eyebrow">Pricing</p>
+          <h2 id="pricing-title">One price. Every feature.</h2>
+        </div>
+        <div class="plans">
+          <div class="plan reveal">
+            <p class="plan-name">Monthly</p>
+            <p class="plan-price"><span class="amount">$2.99</span><span class="per">/month</span></p>
+          </div>
+          <div class="plan featured reveal">
+            <p class="plan-name">Annual</p>
+            <p class="plan-price"><span class="amount">$21.99</span><span class="per">/year</span></p>
+            <p class="plan-note">Under two dollars a month.</p>
+          </div>
+          <div class="plan trial reveal">
+            <p class="plan-name">Start with</p>
+            <p class="plan-price"><span class="amount">28-day</span><span class="per">free trial</span></p>
+          </div>
+        </div>
+        <p class="plan-foot">Subscriptions are handled by the App Store — no account with us, and nothing
+          for us to bill you for directly.</p>
+      </div>
+    </section>
+
+    <!-- Closing -->
+    <section class="closing" aria-label="Closing">
+      <div class="shell">
+        <p class="closing-line reveal">Your library gets better the longer you keep it — because it&rsquo;s yours.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p class="footer-mark">© 2026 Li Donghai · BobNote™</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
