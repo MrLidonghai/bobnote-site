@@ -372,6 +372,18 @@ h1 .muted-line { color: var(--taupe); }
 
 @keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 
+/* Display headings balance their line lengths so the last line is never a
+   single orphaned word. Verified at 1120px: without this, four headings ended
+   on one word — including the accent phrase in the promise band, which broke
+   across two lines. Ignored by browsers without support, which get today's
+   behaviour. */
+h1,
+.promise-line,
+.section-heading h2,
+.closing-line {
+  text-wrap: balance;
+}
+
 /* ---------- Promise band ---------- */
 
 .promise-band {
@@ -380,7 +392,7 @@ h1 .muted-line { color: var(--taupe); }
 }
 
 .promise-line {
-  max-width: 26ch;
+  max-width: 34ch;
   margin: 0 0 clamp(2.5rem, 5vw, 3.5rem);
   font-family: var(--serif);
   font-size: clamp(1.75rem, 3.8vw, 2.9rem);
