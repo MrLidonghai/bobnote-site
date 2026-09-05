@@ -427,6 +427,13 @@ h1,
   letter-spacing: -0.022em;
 }
 
+.promise-note {
+  max-width: 60ch;
+  margin: 1.75rem 0 0;
+  color: var(--taupe);
+  font-size: .9375rem;
+}
+
 /* ---------- Value blocks ---------- */
 
 .value-grid {
@@ -534,76 +541,6 @@ h1,
   font-size: .875rem;
   font-weight: 400;
   line-height: 1.2;
-}
-
-/* ---------- Pricing ---------- */
-
-.pricing-section { background: var(--paper); }
-
-.plans {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1rem, 2.5vw, 1.5rem);
-  margin-bottom: 1.75rem;
-}
-
-.plan {
-  padding: 1.75rem 1.6rem;
-  border: 1px solid var(--hairline);
-  border-radius: 16px;
-  background: var(--surface);
-}
-
-.plan.featured {
-  padding: calc(1.75rem - 1px) calc(1.6rem - 1px);
-  border: 2px solid var(--accent);
-}
-
-.plan-name {
-  margin: 0 0 .9rem;
-  color: var(--taupe);
-  font-size: .8125rem;
-  font-weight: 600;
-  letter-spacing: -0.022em;
-  text-transform: none;
-}
-
-.plan-price {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: .45rem;
-  margin: 0;
-}
-
-.plan-price .amount {
-  font-family: var(--serif);
-  font-size: clamp(1.9rem, 3.4vw, 2.4rem);
-  font-weight: 600;
-  letter-spacing: -.02em;
-  line-height: 1.05;
-  font-variant-numeric: tabular-nums;
-}
-
-.plan-price .per {
-  color: var(--taupe);
-  font-size: .9375rem;
-  font-weight: 600;
-}
-
-.plan.trial .amount { color: var(--accent-text); }
-
-.plan-note {
-  margin: .7rem 0 0;
-  color: var(--taupe);
-  font-size: .875rem;
-}
-
-.plan-foot {
-  max-width: 60ch;
-  margin: 0;
-  color: var(--taupe);
-  font-size: .9375rem;
 }
 
 /* ---------- Closing ---------- */
@@ -749,8 +686,7 @@ h1,
   .hero-inner { grid-template-columns: 1fr; }
   .hero-visual { order: 2; max-width: 560px; }
   .promise-points,
-  .steps,
-  .plans { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
   .value-grid { grid-template-columns: 1fr; }
   .promise-points { gap: 1.5rem; }
 }
@@ -771,11 +707,9 @@ h1,
         animation-range: entry 5% cover 24%;
       }
 
-      .steps li:nth-child(2),
-      .plan:nth-child(2) { animation-range: entry 9%  cover 28%; }
+      .steps li:nth-child(2) { animation-range: entry 9%  cover 28%; }
 
-      .steps li:nth-child(3),
-      .plan:nth-child(3) { animation-range: entry 13% cover 32%; }
+      .steps li:nth-child(3) { animation-range: entry 13% cover 32%; }
     }
   }
 }
