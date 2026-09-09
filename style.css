@@ -543,6 +543,59 @@ h1,
   line-height: 1.2;
 }
 
+/* ---------- Premium ---------- */
+
+.chip-tag {
+  display: inline-block;
+  margin-left: .45rem;
+  padding: .1rem .4rem;
+  border-radius: 4px;
+  background: var(--accent-soft);
+  color: var(--accent-text);
+  font-size: .6875rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  vertical-align: 1px;
+}
+
+.premium-lede {
+  max-width: 62ch;
+  margin: 0 0 2.5rem;
+  color: var(--taupe);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.premium-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.75rem 2.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.premium-list li {
+  padding-top: 1rem;
+  border-top: 1px solid var(--hairline);
+}
+
+.premium-list h3 {
+  margin: 0 0 .4rem;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.premium-list p {
+  margin: 0;
+  color: var(--taupe);
+  font-size: .9375rem;
+  line-height: 1.6;
+}
+
 /* ---------- Closing ---------- */
 
 .closing {
