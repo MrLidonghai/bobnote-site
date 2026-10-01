@@ -210,7 +210,6 @@ a[href^="mailto:"]:active {
 }
 
 .section-heading {
-  max-width: 30ch;
   margin-bottom: clamp(2.75rem, 6vw, 4rem);
 }
 
@@ -723,7 +722,8 @@ h1,
   border-top: 1px solid var(--hairline);
 }
 
-.contact-row > p:first-child {
+.contact-row > p:first-child,
+.contact-row-copy > p:first-child {
   margin: 0;
   color: var(--taupe);
   font-size: .8125rem;
@@ -732,10 +732,26 @@ h1,
   text-transform: none;
 }
 
-.contact-row > p:last-child {
+.contact-row > p:last-child,
+.contact-row-copy > p:last-child {
   margin: .4rem 0 0;
   color: var(--taupe);
   font-size: 1rem;
+}
+
+.contact-row-with-qr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.contact-row-copy { min-width: 0; }
+
+.contact-qr {
+  flex: 0 0 120px;
+  width: 120px;
+  height: 120px;
 }
 
 .contact-card a {
@@ -761,6 +777,11 @@ h1,
   .site-nav { gap: 1.1rem; }
   .brand-mark { width: 34px; height: 34px; }
   .footer-inner { flex-direction: column; align-items: flex-start; gap: .85rem; }
+  .contact-row-with-qr { flex-direction: column; align-items: flex-start; }
+}
+
+@media print {
+  .contact-qr { display: none; }
 }
 
 @media screen {
