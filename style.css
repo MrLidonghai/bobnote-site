@@ -717,13 +717,25 @@ h1,
   background: var(--surface);
 }
 
-.contact-card p {
-  margin: 0 0 .35rem;
+.contact-row + .contact-row {
+  margin-top: 1.85rem;
+  padding-top: 1.85rem;
+  border-top: 1px solid var(--hairline);
+}
+
+.contact-row > p:first-child {
+  margin: 0;
   color: var(--taupe);
   font-size: .8125rem;
   font-weight: 600;
   letter-spacing: -0.022em;
   text-transform: none;
+}
+
+.contact-row > p:last-child {
+  margin: .4rem 0 0;
+  color: var(--taupe);
+  font-size: 1rem;
 }
 
 .contact-card a {
