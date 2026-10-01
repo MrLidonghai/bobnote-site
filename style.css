@@ -377,6 +377,7 @@ h1 .muted-line { color: var(--taupe); }
    across two lines. Ignored by browsers without support, which get today's
    behaviour. */
 h1,
+.content-page h1,
 .promise-line,
 .section-heading h2,
 .closing-line {
@@ -603,7 +604,6 @@ h1,
 }
 
 .closing-line {
-  max-width: 20ch;
   margin: 0;
   font-family: var(--serif);
   font-size: clamp(2rem, 5vw, 3.4rem);
@@ -654,7 +654,6 @@ h1,
 }
 
 .content-page h1 {
-  max-width: 18ch;
   margin-bottom: 1.5rem;
   font-size: clamp(2.1rem, 4.4vw, 3.1rem);
 }
