@@ -3,3 +3,8 @@
 @media(max-width:700px){.case-grid,.case-values{grid-template-columns:1fr}.case-hero{padding-top:40px}.case-hero .lede{font-size:18px}.case-grid{gap:20px}.case-section{padding-block:22px 30px}.case-chapters{gap:7px}.case-chapters a{min-height:44px}.header-inner{gap:14px;flex-wrap:wrap;padding-block:14px}.site-nav{gap:16px}.case-tile-copy{padding:20px}}
 
 .transfer-guide{max-width:860px;padding:24px;margin:20px 0;border:1px solid var(--hairline);border-radius:16px;background:var(--surface-2)}.transfer-guide h3{font-size:21px;margin-bottom:16px}.transfer-guide ol{padding-left:22px;margin-bottom:0}.transfer-guide li{padding:0 0 12px 6px;line-height:1.6;color:var(--taupe)}.transfer-guide li:last-child{padding-bottom:0}.transfer-guide strong{color:var(--ink)}
+
+/* Keep chapter links touch-friendly and anchor headings clear of the sticky header. */
+.case-chapters a{display:inline-flex;align-items:center;justify-content:center;min-height:44px}
+@media(max-width:900px){.case-section figcaption,.case-small,.case-copy .case-tools{font-size:14px}}
+@media(max-width:700px){.case-section{scroll-margin-top:140px}}
