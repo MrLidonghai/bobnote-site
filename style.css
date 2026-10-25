@@ -834,3 +834,8 @@ h1,
 @media print{.hero-copy,.hero-visual{animation:none!important;opacity:1!important;transform:none!important}.project-proof{break-inside:avoid}}
 
 .section-heading h2{scroll-margin-top:100px}
+
+/* Comfortable navigation targets on phones and tablets. */
+@media (max-width: 1200px) {
+  .site-nav a, .footer-nav a { display:inline-flex; align-items:center; justify-content:center; min-width:44px; min-height:44px; }
+}
