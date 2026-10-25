@@ -22,11 +22,10 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="homepage.css">
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header">
+<body class="folder"><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
     <div class="shell header-inner">
       <a class="brand" href="./" aria-label="BobNote home">
         <img class="brand-mark" src="assets/bobnote-mark.png" alt="" width="40" height="40">
@@ -40,259 +39,54 @@
       </nav>
     </div>
   </header>
-
-  <main id="main" tabindex="-1" itemscope itemtype="https://schema.org/SoftwareApplication">
-    <meta itemprop="name" content="BobNote">
-    <meta itemprop="applicationCategory" content="ProductivityApplication">
-    <meta itemprop="operatingSystem" content="macOS, iPadOS, Windows">
-    <meta itemprop="url" content="https://bobnote.app/">
-    <meta itemprop="image" content="https://bobnote.app/assets/og-card.png">
-    <meta itemprop="inLanguage" content="en-US">
-    <meta itemprop="description" content="BobNote is a visual project folder. Gather files and notes, refine them into useful insights, present your work and share selected Boards with BobFolder.">
-    <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-      <meta itemprop="name" content="Li Donghai">
-    </span>
-
-    <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="shell hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow">A visual workspace for your project material</p>
-          <h1 id="hero-title">Your project,<br><span class="muted-line">in a visual folder.</span></h1>
-          <p class="lede">Bring files, images, links and notes together on an infinite canvas. See what you have, refine it into useful insights and practical plans, then present your work and share the Boards you choose.</p>
-          <p class="hero-case-link"><a href="use-cases.html">Follow the project <span aria-hidden="true">→</span></a></p>
-          <div class="store-links" aria-label="BobNote stores">
-            <a class="store-note store-link" href="https://apps.apple.com/app/id6807438962" aria-label="BobNote on the App Store for Mac and iPad">App Store</a>
-            <a class="store-note store-link" href="https://apps.microsoft.com/detail/9NLTZSB90NQ6" aria-label="BobNote on the Microsoft Store for Windows">Microsoft Store</a>
-          </div>
-          <p class="platform-purchase-note">One App Store purchase for Mac and iPad.<br>Your Premium unlock works on both. Windows purchases are separate.</p>
-        </div>
-
-        <div class="hero-visual" aria-hidden="false">
-          <svg class="board" viewBox="0 0 620 540" role="img" aria-labelledby="board-title board-desc">
-            <title id="board-title">A BobNote canvas</title>
-            <desc id="board-desc">Note, to-do, image, board, and mindmap cards arranged on a canvas and joined by curved connectors. One board card contains another board inside it.</desc>
-            <defs>
-              <filter id="cardShadow" x="-30%" y="-30%" width="160%" height="180%">
-                <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.08"/>
-              </filter>
-              <linearGradient id="pic" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" class="pic-top"/>
-                <stop offset="100%" class="pic-bottom"/>
-              </linearGradient>
-            </defs>
-
-            <!-- connectors sit under the cards -->
-            <g class="wires" fill="none" stroke-linecap="round">
-              <path d="M190 92 C240 92 240 220 290 220"/>
-              <path d="M190 252 C240 252 245 240 290 240"/>
-              <path d="M190 430 C240 430 245 300 290 300"/>
-              <path d="M440 210 C456 210 456 120 470 120"/>
-              <path d="M440 290 C452 290 448 420 456 420"/>
-            </g>
-
-            <!-- Note card -->
-            <g class="card" filter="url(#cardShadow)">
-              <rect x="20" y="40" width="170" height="104" rx="14"/>
-              <text class="card-label" x="40" y="70">Note</text>
-              <path class="rule" d="M40 90h128"/>
-              <path class="rule" d="M40 106h128"/>
-              <path class="rule" d="M40 122h78"/>
-            </g>
-
-            <!-- To-do card -->
-            <g class="card" filter="url(#cardShadow)">
-              <rect x="20" y="186" width="170" height="132" rx="14"/>
-              <text class="card-label" x="40" y="216">To-do</text>
-              <g class="todo">
-                <rect class="box done" x="40" y="234" width="13" height="13" rx="3.5"/>
-                <path class="tick" d="M43 240.5l2.6 2.8 4.8-5.4"/>
-                <path class="rule strike" d="M63 241h88"/>
-                <rect class="box done" x="40" y="262" width="13" height="13" rx="3.5"/>
-                <path class="tick" d="M43 268.5l2.6 2.8 4.8-5.4"/>
-                <path class="rule strike" d="M63 269h64"/>
-                <rect class="box" x="40" y="290" width="13" height="13" rx="3.5"/>
-                <path class="rule" d="M63 297h100"/>
-              </g>
-            </g>
-
-            <!-- Image card -->
-            <g class="card" filter="url(#cardShadow)">
-              <rect x="20" y="360" width="170" height="140" rx="14"/>
-              <clipPath id="picClip"><rect x="34" y="374" width="142" height="82" rx="8"/></clipPath>
-              <g clip-path="url(#picClip)">
-                <rect x="34" y="374" width="142" height="82" fill="url(#pic)"/>
-                <circle class="pic-sun" cx="146" cy="398" r="11"/>
-                <path class="pic-hill" d="M34 456l42-38 29 24 26-22 45 36z"/>
-              </g>
-              <text class="card-label" x="40" y="484">Image</text>
-            </g>
-
-            <!-- Board card with a nested board -->
-            <g class="card board-card" filter="url(#cardShadow)">
-              <rect x="290" y="170" width="150" height="170" rx="16"/>
-              <text class="card-label accent" x="310" y="202">Board</text>
-              <rect class="nested" x="310" y="216" width="110" height="100" rx="10"/>
-              <text class="card-label nested-label" x="326" y="246">Board</text>
-              <path class="rule nested-rule" d="M326 262h72"/>
-              <path class="rule nested-rule" d="M326 278h46"/>
-            </g>
-
-            <!-- Link card -->
-            <g class="card" filter="url(#cardShadow)">
-              <rect x="470" y="52" width="140" height="104" rx="14"/>
-              <text class="card-label" x="490" y="82">Link</text>
-              <circle class="dot" cx="496" cy="104" r="5"/>
-              <path class="rule" d="M510 104h74"/>
-              <path class="rule" d="M490 126h58"/>
-            </g>
-
-            <!-- Mindmap card -->
-            <g class="card" filter="url(#cardShadow)">
-              <rect x="456" y="372" width="154" height="132" rx="14"/>
-              <text class="card-label" x="476" y="402">Mindmap</text>
-              <g class="mind">
-                <path d="M504 446l44-16M504 452l46 20"/>
-                <circle class="dot big" cx="496" cy="449" r="9"/>
-                <circle class="dot" cx="556" cy="428" r="6"/>
-                <circle class="dot" cx="556" cy="474" r="6"/>
-              </g>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <section class="section folder-intro" aria-labelledby="folder-title">
-      <div class="shell">
-        <div class="section-heading">
-          <p class="eyebrow">A familiar starting point. A clearer view.</p>
-          <h2 id="folder-title">Open the folder.<br>See your project.</h2>
-          <p class="section-lede">A project starts with a collection: photos, documents, links and notes from different places. Bring that material into a Project Board, where you can lay out what matters and see it in context.</p>
-          <p class="section-lede">Boards nest like folders. Inside each one, arrange visible content, add explanations and keep related material side by side.</p>
-        </div>
-        <figure class="project-proof">
-          <a href="assets/use-cases/home-inspiration.jpg" target="_blank" rel="noopener"><img src="assets/use-cases/home-inspiration.jpg" alt="A real BobNote project Board with interior reference photos, family priorities, a source link and an audio memo arranged together" width="2800" height="1800" loading="lazy"></a>
-          <figcaption>One home project, with its references and priorities together. <a href="home-renovation.html">Follow the project →</a></figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section steps-section" aria-labelledby="steps-title">
-      <div class="shell">
-        <div class="section-heading">
-          <p class="eyebrow">From material to something worth sharing</p>
-          <h2 id="steps-title">Collect. Refine. Present.</h2>
-          <p class="section-lede">Your source material, working thoughts and finished outcomes stay in the same project.</p>
-        </div>
-        <ol class="steps" role="list">
-          <li><p class="step-index" aria-hidden="true">1</p><h3>Gather the material</h3><p>Add files, images, video, links and notes. Use nested Boards for the details, keeping the project easy to navigate.</p></li>
-          <li><p class="step-index" aria-hidden="true">2</p><h3>Distill what matters</h3><p>Compare options, group evidence, annotate details and write down your conclusions. Turn a collection into clear ideas and next steps.</p></li>
-          <li><p class="step-index" aria-hidden="true">3</p><h3>Present the outcome</h3><p>Walk through your canvas in a meeting, or create a focused Board for your audience. Share your screen or export a PDF, with the supporting material still close at hand.</p></li>
-        </ol>
-        <p class="section-follow"><a href="home-renovation.html#decision">See a project decision take shape →</a></p>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="share-title">
-      <div class="shell">
-        <div class="section-heading">
-          <p class="eyebrow">Choose what travels</p>
-          <h2 id="share-title">Share a project.<br>Or just the part that matters.</h2>
-          <p class="section-lede">Keep your working material together, then choose a project or presentation Board to send. You do not have to share your whole workspace.</p>
-        </div>
-        <ol class="steps" role="list">
-          <li><p class="step-index" aria-hidden="true">1</p><h3>Create a BobFolder</h3><p>Export the Board you have open, its nested Boards and included files as a portable copy.</p></li>
-          <li><p class="step-index" aria-hidden="true">2</p><h3>Use your own route</h3><p>Transfer the complete folder by USB, Wi-Fi file transfer or a cloud drive such as Google Drive, OneDrive or Dropbox.</p></li>
-          <li><p class="step-index" aria-hidden="true">3</p><h3>Combine and continue</h3><p>Import it into BobNote on another device. A colleague can work on their copy and send an updated BobFolder back for you to review and bring into your workspace.</p></li>
-        </ol>
-        <p class="section-follow"><a href="team-trip.html#offline">See Create and Combine in action →</a></p>
-        <p class="section-note">Create and Combine require Premium. BobFolders are independent copies; exchanging them is not live synchronization or automatic merging.</p>
-      </div>
-    </section>
-
-    <section class="promise-band" aria-labelledby="promise-title">
-      <div class="shell">
-        <h2 id="promise-title" class="promise-line">Local by design.<br><span class="accent-text">Yours to keep.</span></h2>
-        <ul class="promise-points" role="list">
-          <li><span>Work on your device</span>Your working library stays in local storage. No BobNote cloud service is needed for everyday local editing.</li>
-          <li><span>Keep working offline</span>Use saved notes and local files without a connection. Web links and streaming media still need the internet.</li>
-          <li><span>You decide what to share</span>No BobNote account, advertising or analytics. You choose when to send a project and which transfer service to use.</li>
-        </ul>
-        <p class="promise-note"><a href="privacy.html">Read our privacy policy →</a></p>
-      </div>
-    </section>
-
-    <!-- Card types -->
-    <section class="section chips-section" aria-labelledby="cards-title">
-      <div class="shell">
-        <div class="section-heading compact reveal">
-          <p class="eyebrow">On the canvas</p>
-          <h2 id="cards-title">The tools to make sense of your material</h2>
-        </div>
-        <ul class="chip-list reveal" role="list" aria-label="Card types">
-          <li>Note</li>
-          <li>To-do</li>
-          <li>Image</li>
-          <li>Link</li>
-          <li>Board</li>
-          <li>Shape</li>
-          <li>File</li>
-          <li>Audio</li>
-          <li>Video</li>
-          <li>Column</li>
-          <li>Table</li>
-          <li>Draw</li>
-          <li>Annotate</li>
-          <li>Mindmap <span class="chip-tag">Premium</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- What Premium adds -->
-    <section class="section premium-section" aria-labelledby="premium-title">
-      <div class="shell">
-        <div class="section-heading compact reveal">
-          <p class="eyebrow">Worth knowing before you buy</p>
-          <h2 id="premium-title">Four things need Premium.</h2>
-        </div>
-        <p class="premium-lede reveal">Every card type but one, the whole canvas, nesting,
-          connections, linked copies, the recycle area, and your BobFolder on your own disk
-          &mdash; all of it is there when you open the app. Premium is a one-time unlock, not a
-          subscription, and it adds these four.</p>
-        <ul class="premium-list reveal" role="list">
-          <li>
-            <h3>Mindmap</h3>
-            <p>The mindmap card, and the mind-map view of a board.</p>
-          </li>
-          <li>
-            <h3>Create a BobFolder from a board</h3>
-            <p>Promote any board into a BobFolder of its own.</p>
-          </li>
-          <li>
-            <h3>Combine BobFolder boards</h3>
-            <p>Bring boards from separate BobFolders together.</p>
-          </li>
-          <li>
-            <h3>PDF export without the mark</h3>
-            <p>You can export and print to PDF from the start. Until Premium, the page
-              carries a small BobNote mark in the corner. Your notes themselves are never
-              marked, locked, or altered &mdash; the mark is on the rendered PDF only.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Closing -->
-    <section class="closing" aria-label="Closing">
-      <div class="shell">
-        <p class="closing-line reveal">Your material. Your thinking. Your next step.</p>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
+<main id="main" tabindex="-1">
+<section class="home-hero" aria-labelledby="hero-title">
+<div class="shell home-split">
+<div>
+<p class="eyebrow">A familiar folder. A visual way to work.</p>
+<h1 id="hero-title">Your project,<br>in a visual folder.</h1>
+<p class="lede">Gather your project files, images, links and notes in one visual folder. Arrange them side by side, develop your ideas, and shape the material into work you can present.</p>
+<p class="home-case">Home Renovation · <a href="home-renovation.html">Follow the project →</a>
+</p>
+<div class="store-links" aria-label="BobNote stores"><a class="store-note store-link" href="https://apps.apple.com/app/id6807438962">App Store</a><a class="store-note store-link" href="https://apps.microsoft.com/detail/9NLTZSB90NQ6">Microsoft Store</a>
+</div>
+<p class="platform-purchase-note">One App Store purchase for Mac and iPad.<br>Your Premium unlock works on both. Windows purchases are separate.</p>
+</div>
+<figure class="home-proof"><a href="assets/use-cases/home-inspiration.jpg" target="_blank" rel="noopener"><img src="assets/use-cases/home-inspiration.jpg" width="2800" height="1800" alt="BobNote Home Renovation sample project collecting reference material"></a><figcaption>Home Renovation · An illustrative project in BobNote</figcaption>
+</figure>
+</div>
+</section>
+<div class="shell">
+<section class="home-stories">
+<article class="home-story">
+<h2>Start with the material</h2>
+<p>Bring photos, documents, links and notes into a Project Board. Arrange related material together, with nested Boards for the details. Open external files in a compatible app when needed.</p>
+</article>
+<article class="home-story">
+<h2>Refine it on the same canvas</h2>
+<p>Compare options, select what matters, annotate details and write your conclusions beside the sources. Your collection, thinking and useful outcomes can stay in one project.</p>
+</article>
+<article class="home-story">
+<h2>Present it. Pass it on.</h2>
+<p>Walk through the canvas in a meeting, or make a focused Board for your audience. Export a PDF for viewing, or create a BobFolder so someone can import your selected project into BobNote, continue working and return an updated copy.</p>
+</article>
+</section>
+</div>
+<section class="home-local">
+<div class="shell">
+<h2>Local by design.</h2>
+<p>Your working library stays on your device. Saved notes and local files work offline. No BobNote account is needed.</p>
+</div>
+</section>
+<section class="shell home-boundary">
+<h2>Choose what travels.</h2>
+<p>Create a BobFolder from a selected Board, with its nested Boards and included files. Transfer the complete folder by USB, Wi-Fi file transfer or your chosen cloud drive. The recipient uses Combine a BobFolder to import it. This is a handoff between copies, not live sync or automatic merging.</p>
+<p><a href="team-trip.html#offline">See Create and Combine →</a>
+</p>
+<p class="fine">Mindmap, Create / Combine BobFolder and watermark-free PDF export require Premium. Store purchase checks, web links and streaming media may use the internet.</p>
+</section>
+</main>
+<footer class="site-footer">
     <div class="shell footer-inner">
       <p class="footer-mark">© 2026 Li Donghai · BobNote™</p>
       <nav class="footer-nav" aria-label="Footer">
