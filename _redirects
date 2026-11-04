@@ -1,0 +1,22 @@
+# html_handling is "none" so that /privacy.html returns 200 the way GitHub Pages
+# serves it today — every other mode 307-redirects the .html form away, which
+# would invert the canonical URL that all 12 internal links, both og:url tags,
+# and the App Store Connect privacy policy field all use.
+#
+# "none" also means the root is not automatically mapped to index.html, so it is
+# rewritten here. A 200 rewrite, never a redirect: a 301 from / to /index.html
+# would make the homepage's canonical URL /index.html and contradict the
+# published og:url of https://bobnote.app/.
+/          /index.html     200
+
+# Extensionless paths return 200 on GitHub Pages today. Keep them reachable,
+# pointing at the canonical .html form.
+/privacy   /privacy.html   301
+/support   /support.html   301
+/privacy/  /privacy.html   301
+/support/  /support.html   301
+
+/zh /zh/index.html 301
+/zh/ /zh/index.html 200
+/zh/privacy /zh/privacy.html 301
+/zh/support /zh/support.html 301

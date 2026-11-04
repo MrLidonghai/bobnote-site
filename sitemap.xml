@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://bobnote.app/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://bobnote.app/use-cases.html</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://bobnote.app/home-renovation.html</loc><lastmod>2026-10-21</lastmod></url>
-  <url><loc>https://bobnote.app/team-trip.html</loc><lastmod>2026-10-21</lastmod></url>
-  <url><loc>https://bobnote.app/support.html</loc><lastmod>2026-10-21</lastmod></url>
-  <url><loc>https://bobnote.app/privacy.html</loc><lastmod>2026-10-21</lastmod></url>
-  <url><loc>https://bobnote.app/case-media-credits.html</loc><lastmod>2026-10-21</lastmod></url>
+<url><loc>https://bobnote.app/</loc></url>
+<url><loc>https://bobnote.app/use-cases.html</loc></url>
+<url><loc>https://bobnote.app/home-renovation.html</loc></url>
+<url><loc>https://bobnote.app/team-trip.html</loc></url>
+<url><loc>https://bobnote.app/support.html</loc></url>
+<url><loc>https://bobnote.app/privacy.html</loc></url>
+<url><loc>https://bobnote.app/case-media-credits.html</loc></url>
+<url><loc>https://bobnote.app/zh/</loc></url>
+<url><loc>https://bobnote.app/zh/use-cases.html</loc></url>
+<url><loc>https://bobnote.app/zh/home-renovation.html</loc></url>
+<url><loc>https://bobnote.app/zh/team-trip.html</loc></url>
+<url><loc>https://bobnote.app/zh/support.html</loc></url>
+<url><loc>https://bobnote.app/zh/privacy.html</loc></url>
+<url><loc>https://bobnote.app/zh/case-media-credits.html</loc></url>
 </urlset>
