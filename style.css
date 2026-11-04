@@ -842,6 +842,11 @@ h1,
 .language-switch span { color:var(--hairline-strong); }
 .header-inner > .site-nav { margin-left:auto; }
 .feature-guide { padding-bottom:2.5rem; font-size:.9375rem; }
+.site-header .brand { min-height:44px; }
+.feature-guide a, .home-case a, .home-boundary > p > a, .case-bottom > a, .case-link {
+  display:inline-flex; align-items:center; min-height:44px; max-width:100%;
+}
+.case-chapters a { display:inline-flex; align-items:center; min-height:44px; }
 html[lang="zh-Hans"] body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif; letter-spacing:0; }
 html[lang="zh-Hans"] .lede, html[lang="zh-Hans"] .page-intro { line-height:1.75; }
 @media (max-width:700px) {
