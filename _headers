@@ -1,0 +1,43 @@
+# Structural backstop against edge HTML rewriting.
+#
+# Cloudflare's Email Address Obfuscation documentation states obfuscation does
+# not occur when Cache-Control: no-transform is set — that part is primary
+# source. The equivalent claim for Real User Monitoring beacon injection is
+# NOT firmly established, so this file is a second layer, never the primary
+# control. The primary controls are the dashboard toggles and the Configuration
+# Rule; this only narrows the window if one of those silently fails.
+#
+# Scoped to the HTML files only. Whether no-transform also suppresses
+# Cloudflare's Brotli/gzip re-compression is unverified, and there is no reason
+# to risk that on the CSS and the images.
+
+/
+  Cache-Control: public, max-age=600, no-transform
+/index.html
+  Cache-Control: public, max-age=600, no-transform
+/privacy.html
+  Cache-Control: public, max-age=600, no-transform
+/support.html
+  Cache-Control: public, max-age=600, no-transform
+/404.html
+  Cache-Control: public, max-age=600, no-transform
+
+# Cloudflare attaches a Network Error Logging policy that GitHub Pages never
+# sent, pointing the browser at https://a.nel.cloudflare.com/report/v4 — a
+# third-party origin. It only fires on failed requests (success_fraction 0.0)
+# and is not a "loaded resource", so it does not falsify the privacy page's
+# wording, but it is a data flow we did not choose and did not disclose.
+# max_age 0 instructs the browser to discard the policy. Whether this override
+# actually lands is verified on the wire after deploy, not assumed.
+
+/*
+  NEL: {"max_age":0}
+
+/use-cases.html
+  Cache-Control: public, max-age=600, no-transform
+/home-renovation.html
+  Cache-Control: public, max-age=600, no-transform
+/team-trip.html
+  Cache-Control: public, max-age=600, no-transform
+/case-media-credits.html
+  Cache-Control: public, max-age=600, no-transform
