@@ -842,6 +842,12 @@ h1,
 .language-switch span { color:var(--hairline-strong); }
 .header-inner > .site-nav { margin-left:auto; }
 .feature-guide { padding-bottom:2.5rem; font-size:.9375rem; }
+.feature-comparison { width:100%; table-layout:fixed; border-collapse:collapse; margin:1.25rem 0; font-size:.9375rem; }
+.feature-comparison caption { text-align:left; color:var(--taupe); padding-bottom:.65rem; }
+.feature-comparison th, .feature-comparison td { text-align:left; vertical-align:top; padding:.8rem .6rem; border-bottom:1px solid var(--hairline); overflow-wrap:anywhere; line-height:1.6; }
+.feature-comparison thead th { color:var(--ink); background:var(--surface-2); }
+.feature-comparison th:first-child { width:42%; }
+#feature-guide { scroll-margin-top:150px; }
 .site-header .brand { min-height:44px; }
 .feature-guide a, .home-case a, .home-boundary > p > a, .case-bottom > a, .case-link {
   display:inline-flex; align-items:center; min-height:44px; max-width:100%;
