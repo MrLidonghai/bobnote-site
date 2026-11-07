@@ -1,6 +1,6 @@
 # bobnote.app
 
-The official website for BobNote — local-first visual notes for the Mac.
+The official English and Simplified Chinese website for BobNote — visual project folders for Mac, iPad and Windows.
 
 Plain HTML and CSS, served as-is. No JavaScript, no web fonts, no analytics.
 The site is deliberately built so that the privacy claims on
